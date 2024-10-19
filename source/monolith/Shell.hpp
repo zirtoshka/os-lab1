@@ -1,20 +1,21 @@
 #pragma once
-#include "MessageTools.hpp"
-
-#include <iostream>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <ctime>
+
 #include <chrono>
-#include <vector>
 #include <cstring>
+#include <ctime>
+#include <iostream>
+#include <vector>
+
+#include "MessageTools.hpp"
 
 namespace monolith {
 
 std::string HelloWorld();
-void ExecuteCommand (const std::vector<std::string>& args);
+void ExecuteCommand(const std::vector<std::string>& args);
 int ShellRun();
 std::vector<std::string> ParseInput(const std::string& input);
 
-}
+}  // namespace monolith

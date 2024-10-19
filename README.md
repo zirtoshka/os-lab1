@@ -6,9 +6,9 @@
 
 2. Click "Reopen in Container" in a VSCode notification.
 
-3. Do `bash ci/prepare.sh`.
+3. Do `bash ci/prepare.bash`.
 
-4. Do `bash ci/precommit.sh`.
+4. Do `bash ci/precommit.bash`.
 
 5. Replace `monolith` and `MONOLITH` with your project name.
 
@@ -31,3 +31,6 @@
 - <https://gitlab.com/Lipovsky/twist>
 
 - <https://github.com/vityaman-edu/bst>
+
+
+![Demo](gif/output.gif)

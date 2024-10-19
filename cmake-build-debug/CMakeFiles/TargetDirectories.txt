@@ -1,6 +1,0 @@
-/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/source/CMakeFiles/monolith.dir
-/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/source/CMakeFiles/monolith-app.dir
-/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/source/CMakeFiles/edit_cache.dir
-/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/source/CMakeFiles/rebuild_cache.dir

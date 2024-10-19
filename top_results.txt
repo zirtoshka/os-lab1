@@ -1,0 +1,130 @@
+Processes: 733 total, 3 running, 730 sleeping, 3008 threads 
+2024/11/22 23:02:06
+Load Avg: 2.10, 1.85, 2.28 
+CPU usage: 7.42% user, 23.26% sys, 69.30% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224484 total, 4216M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1686M wired, 3303M compressor), 106M unused.
+VM: 298T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4958867/7962M in, 892705/2438M out.
+Disks: 3112277/47G read, 1002384/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD    SYSMACH CSW    PAGEINS IDLEW POWER INSTRS CYCLES JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 0.0  09:13.35 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  44      11      188605082 90      213039 1       0     0.0   0      0      180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 3 running, 731 sleeping, 2972 threads 
+2024/11/22 23:02:11
+Load Avg: 2.01, 1.83, 2.27 
+CPU usage: 4.62% user, 12.67% sys, 82.69% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1667M wired, 3303M compressor), 149M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959014/7962M in, 892733/2438M out.
+Disks: 3112655/47G read, 1002387/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 95.0 09:18.37 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  44      11      190291165+ 90      214622+ 1       0     95.0  59280724692 15664917156 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 5 running, 729 sleeping, 2959 threads 
+2024/11/22 23:02:16
+Load Avg: 2.01, 1.83, 2.27 
+CPU usage: 3.97% user, 12.31% sys, 83.70% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1665M wired, 3302M compressor), 164M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959132/7962M in, 892756/2438M out.
+Disks: 3112707/47G read, 1002397/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 99.5 09:23.38 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45+     11      192051582+ 90      215794+ 1       0     99.5  58509095178 15698337855 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 3 running, 731 sleeping, 2981 threads 
+2024/11/22 23:02:21
+Load Avg: 1.93, 1.82, 2.26 
+CPU usage: 4.20% user, 12.63% sys, 83.15% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1654M wired, 3302M compressor), 177M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959242/7962M in, 892776/2438M out.
+Disks: 3112821/47G read, 1002722/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 99.2 09:28.38 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      193758223+ 90      217353+ 1       0     99.2  58768759632 15624640995 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 4 running, 730 sleeping, 2957 threads 
+2024/11/22 23:02:26
+Load Avg: 1.86, 1.81, 2.26 
+CPU usage: 3.90% user, 12.10% sys, 83.98% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1654M wired, 3302M compressor), 178M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959393/7962M in, 892811/2438M out.
+Disks: 3112829/47G read, 1002815/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 99.5 09:33.39 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      195522853+ 90      218541+ 1       0     99.5  58504853074 15693591750 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 3 running, 731 sleeping, 2982 threads 
+2024/11/22 23:02:31
+Load Avg: 1.87, 1.81, 2.25 
+CPU usage: 6.3% user, 13.21% sys, 80.75% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1710M wired, 3300M compressor), 108M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959513/7962M in, 892854/2438M out.
+Disks: 3112837/47G read, 1002834/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 98.9 09:38.38 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      197213022+ 90      220521+ 1       0     98.9  58300294801 15554217941 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 3 running, 731 sleeping, 2986 threads 
+2024/11/22 23:02:36
+Load Avg: 1.80, 1.80, 2.25 
+CPU usage: 6.94% user, 14.47% sys, 78.58% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1676M wired, 3300M compressor), 133M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959691/7962M in, 892904/2438M out.
+Disks: 3113003/47G read, 1002878/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 99.4 09:43.39 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      198950715+ 90      222369+ 1       0     99.4  57640101173 15618252266 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 734 total, 3 running, 731 sleeping, 2980 threads 
+2024/11/22 23:02:41
+Load Avg: 2.06, 1.85, 2.26 
+CPU usage: 7.91% user, 14.11% sys, 77.96% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224528 total, 4218M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1707M wired, 3272M compressor), 88M unused.
+VM: 299T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959801/7962M in, 892953/2438M out.
+Disks: 3113939/47G read, 1002927/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 98.6 09:48.36 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      200615984+ 90      225149+ 1       0     98.6  57522763165 15434898013 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 733 total, 5 running, 728 sleeping, 2948 threads 
+2024/11/22 23:02:46
+Load Avg: 2.06, 1.85, 2.26 
+CPU usage: 6.41% user, 13.38% sys, 80.19% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224469 total, 4092M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1731M wired, 3266M compressor), 241M unused.
+VM: 298T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4959943/7962M in, 893017/2438M out.
+Disks: 3113949/47G read, 1002931/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 99.0 09:53.35 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      202341648+ 90      227985+ 1       0     99.0  57325693130 15542379860 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 732 total, 3 running, 729 sleeping, 2964 threads 
+2024/11/22 23:02:51
+Load Avg: 2.13, 1.87, 2.26 
+CPU usage: 7.51% user, 14.43% sys, 78.4% idle 
+SharedLibs: 743M resident, 123M data, 108M linkedit.
+MemRegions: 224425 total, 4091M resident, 370M private, 2630M shared.
+PhysMem: 15G used (1699M wired, 3262M compressor), 226M unused.
+VM: 298T vsize, 5406M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 4960041/7962M in, 893046/2438M out.
+Disks: 3114335/47G read, 1003198/24G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE   BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD     SYSMACH CSW     PAGEINS IDLEW POWER INSTRS      CYCLES      JETPRI USER      #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+38860  monolith-bench-s 98.5 09:58.31 1/1 0   15     2209K 0B   448K  38860 38861 running *0[1]  0.00000 0.00000    501 414    33  45      11      204004367+ 90      230651+ 1       0     98.5  57353197737 15445994626 180    zirtoshka N/A    N/A   N/A   N/A   N/A   N/A  

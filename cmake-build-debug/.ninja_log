@@ -10,3 +10,9 @@
 505	543	1729333602582191592	source/monolith	8d1ee551387fe9f1
 2	12	1729341975324748434	/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/CMakeFiles/cmake.verify_globs	b2665efbb5d11e1a
 2	15	1729342516351741279	/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/CMakeFiles/cmake.verify_globs	b2665efbb5d11e1a
+6	18	1731526817155964955	/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/CMakeFiles/cmake.verify_globs	b2665efbb5d11e1a
+21	749	1731526817171033627	source/CMakeFiles/monolith.dir/monolith/app/Main.cpp.o	a10774384678a96d
+22	750	1731526817171979313	source/CMakeFiles/monolith-app.dir/monolith/app/Main.cpp.o	6bcd177709844369
+749	796	1731526817898993307	source/libmonolith.a	6eef50207dd9e6bb
+796	963	1731526817945893156	source/monolith	8d1ee551387fe9f1
+2	13	1731527367861753914	/Users/zirtoshka/os/lapa1/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/CMakeFiles/cmake.verify_globs	b2665efbb5d11e1a

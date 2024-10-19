@@ -3,6 +3,9 @@
 //
 
 #include "MessageTools.hpp"
+
+#include <string>
+
 namespace monolith {
 
 std::string getColorCode(Color color) {
@@ -21,16 +24,15 @@ std::string getColorCode(Color color) {
       return "\033[36m";
     case Color::RESET:
       return "\033[0m";
-    default:
-      return "\033[0m";
   }
+  return "\033[0m";
 }
 
-void printColoredMessage(const std::string& message, Color color, int hi) {
-  if (hi) {
+static void printColoredMessage(const std::string& message, Color color, int hi) {
+  if (hi != 0) {
     std::cout << getColorCode(color) << message << getColorCode(Color::RESET);
   } else {
-    std::cout << getColorCode(color) << message << getColorCode(Color::RESET) << std::endl;
+    std::cout << getColorCode(color) << message << getColorCode(Color::RESET) << '\n';
   }
 }
 

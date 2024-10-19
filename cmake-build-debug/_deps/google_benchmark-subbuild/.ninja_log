@@ -1,0 +1,21 @@
+# ninja log v6
+1	18	1732266293012838887	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-mkdir	c4cb1af3520b8bc1
+1	18	1732266293012838887	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-mkdir	c4cb1af3520b8bc1
+18	2297	1732266295292098212	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-download	9ad54e7e56bea8df
+18	2297	1732266295292098212	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-download	9ad54e7e56bea8df
+2297	2331	1732266295292768633	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-update	21448af5d2777e0e
+2297	2331	1732266295292768633	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-update	21448af5d2777e0e
+2331	2346	1732266295340491076	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-patch	87cfdeeb14ab85f0
+2331	2346	1732266295340491076	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-patch	87cfdeeb14ab85f0
+2346	2358	1732266295352811550	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-configure	f3e62595d2eaca39
+2346	2358	1732266295352811550	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-configure	f3e62595d2eaca39
+2358	2370	1732266295365066445	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-build	bd37e276722b0e7
+2358	2370	1732266295365066445	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-build	bd37e276722b0e7
+2370	2382	1732266295376562757	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-install	1ce55532e857765e
+2370	2382	1732266295376562757	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-install	1ce55532e857765e
+2382	2394	1732266295389110177	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-test	c050f17f060e550a
+2382	2394	1732266295389110177	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-test	c050f17f060e550a
+2394	2416	1732266295410489351	CMakeFiles/google_benchmark-populate-complete	4181bd5eb541cff5
+2394	2416	1732266295410489351	google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-done	4181bd5eb541cff5
+2394	2416	1732266295410489351	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate-complete	4181bd5eb541cff5
+2394	2416	1732266295410489351	/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-done	4181bd5eb541cff5

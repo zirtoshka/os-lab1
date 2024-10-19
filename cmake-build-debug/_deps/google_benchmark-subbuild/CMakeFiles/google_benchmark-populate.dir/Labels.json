@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-build.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-download.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-install.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-test.rule"
+		},
+		{
+			"file" : "/Users/zirtoshka/os/\u043c\u0430\u043a\u043c\u0430\u043a\u0430\u043a\u0430/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"google_benchmark-populate"
+		],
+		"name" : "google_benchmark-populate"
+	}
+}

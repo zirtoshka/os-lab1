@@ -11,6 +11,13 @@
             "options": {
                 "cwd": "${workspaceFolder}/build"
             }
+        },
+        {
+            "label": "Sign Binary",
+            "type": "shell",
+            "command": "codesign --force --sign - --entitlements ${workspaceFolder}/entitlements.plist ./build/benchmark/monolith-bench-search-name",
+            "group": "build",
+            "dependsOn": "Build All"
         }
     ]
 }

@@ -3,6 +3,8 @@
 //
 #include "Shell.hpp"
 
+#include <sys/mman.h>
+
 namespace monolith {
 
 std::vector<std::string> ParseInput(const std::string& input) {
@@ -21,41 +23,44 @@ void ExecuteCommand(const std::vector<std::string>& args) {
     return;
   }
 
-  char* argv[args.size() + 1];
-  for (size_t i = 0; i < args.size(); ++i) {
-    argv[i] = const_cast<char*>(args[i].c_str());
+  std::vector<char*> argv;
+  for (const auto& arg : args) {
+    argv.push_back(const_cast<char*>(arg.c_str()));
   }
-  argv[args.size()] = nullptr;  // the last element of argv must be a NULL pointer
+  argv.push_back(nullptr);
 
-  std::chrono::time_point start = std::chrono::high_resolution_clock::now();
+  auto start = std::chrono::high_resolution_clock::now();
 
-  pid_t pid = fork();
-  if (pid < -1) {
-    PrintError("Fork failed(( Couldn't create a new process");
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+  pid_t pid = vfork();
+#pragma clang diagnostic pop
+
+  if (pid < 0) {
+    PrintError("不三不四!");
     return;
   }
+
   if (pid == 0) {
-    // дочерний процесс
-    execvp(argv[0], argv);  // cmd, list of args to cmd
-    PrintError("Execution failed((");
-    exit(EXIT_FAILURE);
-  } else {
-    // parent process
-    int stat_loc;
-    waitpid(pid, &stat_loc, 0);
-
-    std::chrono::time_point end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> elapsed = end - start;
-
-    PrintInfo("Program executed in " + std::to_string(elapsed.count()) + " seconds.");
+    execvp(argv[0], argv.data());
+    PrintError("从天而降");
+    _exit(1);
   }
+
+  int status;
+  waitpid(pid, &status, 0);
+
+  std::chrono::time_point end = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> elapsed = end - start;
+
+  PrintInfo("程序在 " + std::to_string(elapsed.count()) + " 秒内执行.");
 }
 
 int ShellRun() {
   std::string input;
 
   while (true) {
-    PrintShellHi("pupa_shell> ");
+    PrintShellHi("指鹿为马> ");
 
     std::getline(std::cin, input);
 
@@ -63,7 +68,6 @@ int ShellRun() {
       break;
     }
 
-    // ввод на аргументы
     std::vector<std::string> args = ParseInput(input);
 
     ExecuteCommand(args);

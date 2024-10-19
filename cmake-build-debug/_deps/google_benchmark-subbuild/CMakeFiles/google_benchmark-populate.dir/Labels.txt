@@ -1,0 +1,14 @@
+# Target labels
+ google_benchmark-populate
+# Source files and their labels
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/CMakeFiles/google_benchmark-populate-complete.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-build.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-configure.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-download.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-install.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-mkdir.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-patch.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-test.rule
+/Users/zirtoshka/os/макмакака/diy-shell-benchmark-24y-zirtoshka/cmake-build-debug/_deps/google_benchmark-subbuild/google_benchmark-populate-prefix/src/google_benchmark-populate-stamp/google_benchmark-populate-update.rule
