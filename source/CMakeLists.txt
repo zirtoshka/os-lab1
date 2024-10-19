@@ -3,7 +3,9 @@ get_filename_component(MONOLITH_SOURCE_PATH "./${PROJECT_NAME}" ABSOLUTE)
 
 file(GLOB_RECURSE MONOLITH_SOURCES CONFIGURE_DEPENDS *.hpp *.cpp)
 
-set(MONOLITH_LIB_SOURCES ${MONOLITH_SOURCES})
+set(MONOLITH_LIB_SOURCES ${MONOLITH_SOURCES}
+        monolith/Shell.cpp
+        monolith/MessageTools.cpp)
 
 set(MONOLITH_APP_SOURCES monolith/app/Main.cpp)
 
