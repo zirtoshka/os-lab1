@@ -4,7 +4,6 @@
 
 namespace monolith {
 
-
 std::string CaptureOutput(const std::string& command) {
   std::ostringstream oss;
   std::ostringstream err_oss;

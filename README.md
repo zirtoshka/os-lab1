@@ -1,36 +1,175 @@
-# C++ Monolith App Template
-
-## Getting Started
-
-1. Open the project in the VSCode.
-
-2. Click "Reopen in Container" in a VSCode notification.
-
-3. Do `bash ci/prepare.bash`.
-
-4. Do `bash ci/precommit.bash`.
-
-5. Replace `monolith` and `MONOLITH` with your project name.
-
-6. Repeat steps 1-4.
-
-## Notes
-
-- Application executable is available at `{build_dir}/source/{project_name}`.
-
-- To enable `benchmark` module configure the project with `{project_name}_BENCHMARK=ON`.
-
-- Benchmark executables are available at `{build_dir}/benchmark/{project_name}-bench-{bench_name}`.
-
-- Do not forget to use `Asan` build mode for debugging.
-
-- Press F5 to build and run tests under a debuger in VSCode UI.
-
-## Thanks
-
-- <https://gitlab.com/Lipovsky/twist>
-
-- <https://github.com/vityaman-edu/bst>
+P3309 Зайцева Ирина Сергеевна
+Базовый трек, оценка 3. ЛР 1. Shell (vfork)
+Вариант: MacOS, search-name, bin-search
 
 
-![Demo](gif/output.gif)
+# binsearch: 
+
+производился запуск нагрузчика с разными флагами оптимизации (для второго нагрузчика аналогично)\
+\
+запуск без оптимизации (О0) \
+Реальное время выполнения (Time) и процессорное время (CPU Time) почти совпадают. Это указывает на минимальные потери из-за переключений контекста и других системных накладных расходов.Если бы были значительные задержки ввода-вывода (например, при чтении данных с диска), реальное время было бы намного больше CPU времени. Здесь этого не наблюдается.
+
+![alt text](grafiki/image-24.png)
+
+O2
+![alt text](grafiki/image-25.png)
+
+O3\
+-O3, будучи агрессивным, может ухудшить производительность из-за увеличения кода, усложнения инструкций и снижения эффективности использования кэша. Поэтому в данном случае прирост от -O3 либо отсутствует, либо приводит к небольшому замедлению.
+![alt text](grafiki/image-26.png)
+
+-O3 -march=native -funroll-loops -ffast-math\
+Флаг -march=native позволяет использовать инструкции, специфичные для данной архитектуры CPU. Это могло бы дать преимущество, но прирост минимален, вероятно из-за того, что тестируемый код не сильно выигрывает от SIMD-инструкций или других оптимизаций.
+
+![alt text](grafiki/image-27.png)
+---
+- Основное ускорение достигается при переходе от -O0 к -O2. Флаги -O3 и специфичные оптимизации дают минимальные приросты для данного типа задач.
+- Значение Load Average указывает на то, что система не полностью перегружена
+
+
+
+после запуска нагрузчика производился мониторинг в Instrumants XCode для macOS 
+
+---
+На macOS используется архитектура big.LITTLE, которая комбинирует ядра с высокой производительностью (performance cores, P-ядра) и энергоэффективные ядра (efficiency cores, E-ядра). Разделение этих ядер можно наблюдать на скринах.
+
+Это сделано для обеспечения высокой производительности при минимальном энергопотреблении. 
+Efficiency Cores (E-ядра):
+- Оптимизированы для выполнения фоновых задач, требующих низкого энергопотребления.
+- Прекрасно подходят для задач с низкой интенсивностью вычислений, таких как обновление интерфейса, системные фоновые процессы и обработка простой логики.
+Performance Cores (P-ядра):
+- Разработаны для максимальной производительности.
+- Используются для ресурсоемких задач, таких как компиляция, обработка мультимедиа, игры или работа с большими данными.
+---
+## timeprofiler 
+### запуск 1 экземпляра
+![alt text](grafiki/image6.png)
+![alt text](grafiki/image7.png)
+
+На скринах показано, как используются ядра. Первые 4 ядра практически не берут на себя работу, т.к. это не их "профиль" и Performance Cores справляются. \
+На первом скрине можно наблюдать "провалы": насколько я поняла, это, возможно, переключение контекста. Ниже на первом скрине можно увидеть, какие функции занимают больше времени на выполнение.
+### в какой-то момент запустили 2ой экземпляр
+![alt text](grafiki/image8.png)
+![alt text](grafiki/image9.png)
+
+Заметный пробел в графике CPU Usege совпадает с моментом, когда начал работу второй экземпляр.
+
+### 3 экземпляра 
+![alt text](grafiki/image10.png)
+![alt text](grafiki/image11.png)
+
+Видимо, из-за неодновременного запуска нагрузчиков график имеет такие пробелы.
+
+#### 4 экземпляра
+![alt text](grafiki/image-1.png)
+![alt text](grafiki/image12.png)
+
+#### 8 экземпляров
+![alt text](grafiki/image-2.png)
+![alt text](grafiki/image-3.png)
+
+Захотелось зпускить 8 экземпляров, чтобы посмотреть, как на себя возьмут нагрузку E-ядра.
+
+# search name 
+
+далее запуск с arg(100):\
+без оптимизации
+
+![alt text](grafiki/image-31.png)
+
+O2
+
+![alt text](grafiki/image-30.png)
+
+O3 
+
+ ![alt text](grafiki/image-29.png)
+
+- в этом случае оптимизация не была избыточной и об этом может сказать реальное время выполнения.
+
+## timeprofiler
+### запустили 1 экземпляра
+![alt text](grafiki/image-4.png)
+![alt text](grafiki/image-5.png)
+
+### в какой-то момент запустили 2 экземпляра
+![alt text](grafiki/image-6.png)
+![alt text](grafiki/image-7.png)
+### 3 экземпляра
+![alt text](grafiki/image-8.png)
+![alt text](grafiki/image-9.png)
+#### 4 экземпляра
+![alt text](grafiki/image-10.png)
+![alt text](grafiki/image-11.png)
+#### 8 экземпляров
+![alt text](grafiki/image-12.png)
+![alt text](grafiki/image-13.png)
+
+Есть схожесть с предыдущим нагрузчиком в наличии переключении контекста и загруженности E-ядер по мере увеличения количества экземпляров.\
+\
+Неравномерный график для ядер с пиками и провалами при запуске нагрузчиков, возможно, обусловлен тем, что:
+- используются операции ввода-вывода (I/O) для работы с файловой системой (I/O-bound).Процессор может простаивать, ожидая завершения операций чтения из файловой системы.
+- из-за рекурсивного обхода каталогов нагрузка может значительно варьироваться
+    - даже если каталогов мало, но в них много файлов, нагрузка будет высокой
+    - если есть вложенные каталоги с правами, которые нельзя обойти (skip_permission_denied), процессоры могут простаивать из-за обработки ошибок.
+- дополнительные проверки, такие как is_fifo, is_other, и обработка исключений, добавляют нерегулярные пики
+- задачи с большим количеством I/O могут направляться на E-cores ядра, что вызывает провалы в производительности
+
+# multi thread 
+арг(100)
+
+1поточ
+
+"-O0"
+![alt text](grafiki/image-32.png)
+"-O2"
+![alt text](grafiki/image-135.png)
+"-O3"
+![alt text](grafiki/image-37.png)
+"-O3 -march=native -funroll-loops -ffast-math"
+![alt text](grafiki/image-38.png)
+
+2xпоточ
+
+"-O0"
+![alt text](grafiki/image-33.png)
+"-O2"
+![alt text](grafiki/image-35.png)
+"-O3"
+![alt text](grafiki/image-40.png)
+"-O3 -march=native -funroll-loops -ffast-math"
+![alt text](grafiki/image-39.png)
+
+4xпоточ
+
+"-O0"
+![alt text](grafiki/image-34.png)
+"-O2"
+![alt text](grafiki/image-36.png)
+"-O3"
+![alt text](grafiki/image-41.png)
+"-O3 -march=native -funroll-loops -ffast-math"
+![alt text](grafiki/image-42.png)
+
+Многопоточные задачи менее чувствительны к флагам оптимизации, так как время выполнения ограничено синхронизацией и распределением потоков. Небольшое ухудшение времени, возможно, связано с более сложным управлением потоками или снижением точности при агрессивной оптимизации.
+
+## allocations
+### запустили однопоточ
+![alt text](grafiki/image4.png)
+![alt text](grafiki/image5.png)
+Неровности (нельзя сказать, что я это прямо-таки пики) говорят, что код создает временные объекты в циклах или рекурсивных вызовах. Нет явных признаков утечки памяти, так как нет постоянного роста уровеня выделений (без возвращения к начальному уровню).
+
+## timeprofiler
+### запустили однопоточ
+![alt text](grafiki/image-14.png)
+![alt text](grafiki/image-15.png)
+### 2хпоточ
+![alt text](grafiki/image-16.png)
+![alt text](grafiki/image-17.png)
+### 4хпотточ
+![alt text](grafiki/image-18.png)
+![alt text](grafiki/image-19.png)
+
+- хорошо видно, когда заканчивает работу binsearch (спад)
+- по мере увеличения потоков загружаются ядра

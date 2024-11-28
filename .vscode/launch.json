@@ -31,6 +31,15 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "multi Test",
+            "program": "${workspaceFolder}/build/benchmark/monolith-bench-multi",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build All",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "search name Test",
             "program": "${workspaceFolder}/build/benchmark/monolith-bench-search-name",
             "args": [],

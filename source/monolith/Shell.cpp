@@ -37,13 +37,13 @@ void ExecuteCommand(const std::vector<std::string>& args) {
 #pragma clang diagnostic pop
 
   if (pid < 0) {
-    PrintError("不三不四!");
+    PrintError("vfork failed((!");
     return;
   }
 
   if (pid == 0) {
     execvp(argv[0], argv.data());
-    PrintError("从天而降");
+    PrintError("Execution failed((");
     _exit(1);
   }
 
@@ -53,14 +53,14 @@ void ExecuteCommand(const std::vector<std::string>& args) {
   std::chrono::time_point end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> elapsed = end - start;
 
-  PrintInfo("程序在 " + std::to_string(elapsed.count()) + " 秒内执行.");
+  PrintInfo("Program executed in  " + std::to_string(elapsed.count()) + " seconds.");
 }
 
 int ShellRun() {
   std::string input;
 
   while (true) {
-    PrintShellHi("指鹿为马> ");
+    PrintShellHi("pupa_shell> ");
 
     std::getline(std::cin, input);
 
