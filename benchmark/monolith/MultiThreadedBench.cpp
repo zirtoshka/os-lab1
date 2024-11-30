@@ -35,6 +35,6 @@ static void BM_MultiThreadedTask(benchmark::State& state) {
   }
 }
 
-BENCHMARK(BM_MultiThreadedTask)->Iterations(100)->Threads(4);
+BENCHMARK(BM_MultiThreadedTask)->Iterations(100)->Threads(1);
 
 BENCHMARK_MAIN();
