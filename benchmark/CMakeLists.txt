@@ -4,10 +4,10 @@ set(MONOLITH_BENCH_TARGET_BASE "${PROJECT_NAME}-bench")
 
 # ффффффффф
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0") # Для отладки
-set(CMAKE_CXX_FLAGS_RELEASE "-O0")
+# set(CMAKE_CXX_FLAGS_RELEASE "-O0")
 # set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 # set(CMAKE_CXX_FLAGS_RELEASE "-O3")
-# set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -funroll-loops -ffast-math") 
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -funroll-loops -ffast-math") 
 
 
 # Создать файл прав для подписи (entitlements)

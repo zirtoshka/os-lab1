@@ -4,7 +4,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Launch",
+            "name": "pupa_shell",
             "program": "${workspaceFolder}/build/source/monolith",
             "args": [],
             "cwd": "${workspaceFolder}",
@@ -13,16 +13,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug Test",
+            "name": "test",
             "program": "${workspaceFolder}/build/test/monolith-test",
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "Build All"
         },
         {
-            "type": "lldb",
+            "type": "ll",
             "request": "launch",
-            "name": "binSearch Test",
+            "name": "binSearch",
             "program": "${workspaceFolder}/build/benchmark/monolith-bench-binary-search",
             "args": [],
             "cwd": "${workspaceFolder}",
@@ -31,7 +31,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "multi Test",
+            "name": "multi",
             "program": "${workspaceFolder}/build/benchmark/monolith-bench-multi",
             "args": [],
             "cwd": "${workspaceFolder}",
@@ -40,7 +40,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "search name Test",
+            "name": "search name",
             "program": "${workspaceFolder}/build/benchmark/monolith-bench-search-name",
             "args": [],
             "cwd": "${workspaceFolder}",

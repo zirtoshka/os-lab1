@@ -10,16 +10,11 @@ static void BM_SearchFile(benchmark::State& state) {
 
   std::cout << "Benchmarking search in directory: " << directory << std::endl;
 
-  int iterations = state.range(0);
 
   for (auto _ : state) {
-    for (int i = 0; i < iterations; i++) {
       searchFile(directory, filename);
-    }
   }
 }
 
-// BENCHMARK(BM_SearchFile)->Arg(100000);
-BENCHMARK(BM_SearchFile)->Arg(100);
-
+BENCHMARK(BM_SearchFile)->Iterations(100);
 BENCHMARK_MAIN();

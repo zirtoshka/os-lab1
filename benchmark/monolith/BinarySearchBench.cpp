@@ -12,16 +12,13 @@ static void BM_BinarySearch(benchmark::State& state) {
   std::vector<int> data(size);
   std::iota(data.begin(), data.end(), 0);
 
-  const int target = size / 2;
-
-  int repetitions = state.range(0);
+  int target;
 
   for (auto _ : state) {
-    for (int i = 0; i < repetitions; ++i) {
-      benchmark::DoNotOptimize(binarySearch(data, target));
-    }
+    target = rand() % size;
+    binarySearch(data, target);
   }
 }
 
-BENCHMARK(BM_BinarySearch)->Arg(100000000);
+BENCHMARK(BM_BinarySearch)->Iterations(10000000);
 BENCHMARK_MAIN();

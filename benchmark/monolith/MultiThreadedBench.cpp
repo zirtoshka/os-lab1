@@ -17,7 +17,7 @@ void binarySearchTask(int repetitions) {
   const int target = size / 2;
 
   for (int i = 0; i < repetitions; ++i) {
-    benchmark::DoNotOptimize(binarySearch(data, target));
+    binarySearch(data, target);
   }
 }
 
@@ -41,10 +41,7 @@ static void BM_MultiThreadedTask(benchmark::State& state) {
   }
 }
 
-// BENCHMARK(BM_MultiThreadedTask)->Arg(100000000)->Threads(1);  // Однопоточная
-// BENCHMARK(BM_MultiThreadedTask)->Arg(100000000)->Threads(2);  // 2хпоточная
-// BENCHMARK(BM_MultiThreadedTask)->Arg(100000000)->Threads(4);  // 4хпоточная
 
-BENCHMARK(BM_MultiThreadedTask)->Arg(100)->Threads(4);  
+BENCHMARK(BM_MultiThreadedTask)->Iterations(100)->Threads(4);  
 
 BENCHMARK_MAIN();
