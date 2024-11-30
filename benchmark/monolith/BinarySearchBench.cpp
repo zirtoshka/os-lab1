@@ -20,5 +20,5 @@ static void BM_BinarySearch(benchmark::State& state) {
   }
 }
 
-BENCHMARK(BM_BinarySearch)->Iterations(10000000);
+BENCHMARK(BM_BinarySearch)->Iterations(10000000000);
 BENCHMARK_MAIN();

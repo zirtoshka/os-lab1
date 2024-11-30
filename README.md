@@ -274,32 +274,64 @@ Efficiency Cores (E-ядра):
 ---
 ## timeprofiler 
 ### запуск 1 экземпляра
-![alt text](grafiki/image6.png)
-![alt text](grafiki/image7.png)
+![alt text](image-14.png)
+![alt text](image-15.png)
 
 На скринах показано, как используются ядра. Первые 4 ядра практически не берут на себя работу, т.к. это не их "профиль" и Performance Cores справляются. \
-На первом скрине можно наблюдать "провалы": насколько я поняла, это, возможно, переключение контекста. Ниже на первом скрине можно увидеть, какие функции занимают больше времени на выполнение.
+Ниже на первом скрине можно увидеть, какие функции занимают больше времени на выполнение.
 ### в какой-то момент запустили 2ой экземпляр
-![alt text](grafiki/image8.png)
-![alt text](grafiki/image9.png)
-
-Заметный пробел в графике CPU Usege совпадает с моментом, когда начал работу второй экземпляр.
+![alt text](image-16.png)
+![alt text](image-17.png)
+На первом скрине можно наблюдать "провалы": насколько я поняла, это, возможно, переключение контекста. 
 
 ### 3 экземпляра 
-![alt text](grafiki/image10.png)
-![alt text](grafiki/image11.png)
+![alt text](image-18.png)
+![alt text](image-19.png)
 
 Видимо, из-за неодновременного запуска нагрузчиков график имеет такие пробелы.
 
 #### 4 экземпляра
-![alt text](grafiki/image-1.png)
-![alt text](grafiki/image12.png)
+![alt text](image-20.png)
+![alt text](image-21.png)
 
 #### 8 экземпляров
-![alt text](grafiki/image-2.png)
-![alt text](grafiki/image-3.png)
+![alt text](image-22.png)
+![alt text](image-23.png)
 
 Захотелось зпускить 8 экземпляров, чтобы посмотреть, как на себя возьмут нагрузку E-ядра.
+
+
+
+###
+данные для графика получаем с помощь команды:
+
+```bash
+top -pid <PID> > process_output.txt &
+sleep <n_sec> && kill $!
+```
+
+пример данных в файле process_output.txt:
+
+![alt text](image-34.png)
+
+3д график Time - CPU Usage (%) - Memory Usage (MB)
+
+график по 100 точкам:
+![alt text](image-35.png)
+
+график по 300 точкам:
+![alt text](image-36.png)
+
+3д график Time - CPU Usage (%) - Disk (MB)
+график по 300 точкам:
+![alt text](image-37.png)
+
+3д график Time - CPU Usage (%) - Load Avg
+график по 300 точкам:
+![alt text](image-38.png)
+
+
+
 
 # search name 
 
@@ -410,21 +442,25 @@ BENCHMARK_MAIN();
 
 ## timeprofiler
 ### запустили 1 экземпляра
-![alt text](grafiki/image-4.png)
-![alt text](grafiki/image-5.png)
+![alt text](image-24.png)
+![alt text](image-25.png)
 
 ### в какой-то момент запустили 2 экземпляра
-![alt text](grafiki/image-6.png)
-![alt text](grafiki/image-7.png)
+![alt text](image-26.png)
+![alt text](image-27.png)
+
 ### 3 экземпляра
-![alt text](grafiki/image-8.png)
-![alt text](grafiki/image-9.png)
+![alt text](image-28.png)
+![alt text](image-29.png)
+
 #### 4 экземпляра
-![alt text](grafiki/image-10.png)
-![alt text](grafiki/image-11.png)
+![alt text](image-30.png)
+![alt text](image-31.png)
+
 #### 8 экземпляров
-![alt text](grafiki/image-12.png)
-![alt text](grafiki/image-13.png)
+![alt text](image-33.png)
+![alt text](image-32.png)
+
 
 Есть схожесть с предыдущим нагрузчиком в наличии переключении контекста и загруженности E-ядер по мере увеличения количества экземпляров.\
 \
@@ -436,60 +472,79 @@ BENCHMARK_MAIN();
 - дополнительные проверки, такие как is_fifo, is_other, и обработка исключений, добавляют нерегулярные пики
 - задачи с большим количеством I/O могут направляться на E-cores ядра, что вызывает провалы в производительности
 
+
+
+
+
+3д график Time - CPU Usage (%) - Memory Usage (MB)
+график по 300 точкам:
+![alt text](image-39.png)
+
+3д график Time - CPU Usage (%) - Disk (MB)
+график по 300 точкам:
+![alt text](image-40.png)
+
+3д график Time - CPU Usage (%) - Load Avg
+график по 300 точкам:
+![alt text](image-41.png)
+
+
 # multi thread 
 арг(100)
 
 1поточ
 
 "-O0"
-![alt text](grafiki/image-32.png)
+![alt text](image-47.png)
 "-O2"
-![alt text](grafiki/image-135.png)
 "-O3"
-![alt text](grafiki/image-37.png)
+![alt text](image-44.png)
 "-O3 -march=native -funroll-loops -ffast-math"
-![alt text](grafiki/image-38.png)
+
+---
 
 2xпоточ
 
 "-O0"
-![alt text](grafiki/image-33.png)
+![alt text](image-52.png)
+
 "-O2"
-![alt text](grafiki/image-35.png)
+
 "-O3"
-![alt text](grafiki/image-40.png)
+
 "-O3 -march=native -funroll-loops -ffast-math"
-![alt text](grafiki/image-39.png)
+
 
 4xпоточ
 
 "-O0"
-![alt text](grafiki/image-34.png)
+![alt text](image-58.png)
 "-O2"
-![alt text](grafiki/image-36.png)
+
 "-O3"
-![alt text](grafiki/image-41.png)
+
 "-O3 -march=native -funroll-loops -ffast-math"
-![alt text](grafiki/image-42.png)
+
 
 Многопоточные задачи менее чувствительны к флагам оптимизации, так как время выполнения ограничено синхронизацией и распределением потоков. Небольшое ухудшение времени, возможно, связано с более сложным управлением потоками или снижением точности при агрессивной оптимизации.
 
 ## allocations
 ### запустили однопоточ
-![alt text](grafiki/image4.png)
-![alt text](grafiki/image5.png)
-Неровности (нельзя сказать, что я это прямо-таки пики) говорят, что код создает временные объекты в циклах или рекурсивных вызовах. Нет явных признаков утечки памяти, так как нет постоянного роста уровеня выделений (без возвращения к начальному уровню).
+![alt text](image-45.png)
+![alt text](image-46.png)
 
 ## timeprofiler
 ### запустили однопоточ
-![alt text](grafiki/image-14.png)
-![alt text](grafiki/image-15.png)
+![alt text](image-42.png)
+![alt text](image-43.png)
 ### 2хпоточ
-![alt text](grafiki/image-16.png)
-![alt text](grafiki/image-17.png)
+![alt text](image-48.png)
+![alt text](image-49.png)
+![alt text](image-50.png)
+![alt text](image-51.png)
 ### 4хпотточ
-![alt text](grafiki/image-18.png)
-![alt text](grafiki/image-19.png)
-
-- хорошо видно, когда заканчивает работу binsearch (спад)
-- по мере увеличения потоков загружаются ядра
+![alt text](image-55.png)
+![alt text](image-53.png)
+![alt text](image-54.png)
+![alt text](image-56.png)
+![alt text](image-57.png)

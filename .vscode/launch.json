@@ -20,7 +20,7 @@
             "preLaunchTask": "Build All"
         },
         {
-            "type": "ll",
+            "type": "lldb",
             "request": "launch",
             "name": "binSearch",
             "program": "${workspaceFolder}/build/benchmark/monolith-bench-binary-search",

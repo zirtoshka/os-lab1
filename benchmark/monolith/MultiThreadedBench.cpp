@@ -10,38 +10,31 @@
 
 namespace fs = std::filesystem;
 
-void binarySearchTask(int repetitions) {
+void binarySearchTask() {
   const int size = 100000000;
   std::vector<int> data(size);
   std::iota(data.begin(), data.end(), 0);
-  const int target = size / 2;
-
-  for (int i = 0; i < repetitions; ++i) {
-    binarySearch(data, target);
-  }
+  const int target = rand() % size;
+  binarySearch(data, target);
 }
 
-void searchFileTask(const fs::path& directory, const std::string& filename, int iterations) {
-  for (int i = 0; i < iterations; ++i) {
-    searchFile(directory, filename);
-  }
+void searchFileTask(const fs::path& directory, const std::string& filename) {
+  searchFile(directory, filename);
 }
 
 static void BM_MultiThreadedTask(benchmark::State& state) {
-  int repetitions = state.range(0);
   fs::path directory = "/Users/zirtoshka/inf_sys";
   std::string filename = "target_file.txt";
 
   for (auto _ : state) {
-    std::thread binarySearchThread(binarySearchTask, repetitions);
-    std::thread fileSearchThread(searchFileTask, directory, filename, repetitions);
+    std::thread binarySearchThread(binarySearchTask);
+    std::thread fileSearchThread(searchFileTask, directory, filename);
 
     binarySearchThread.join();
     fileSearchThread.join();
   }
 }
 
-
-BENCHMARK(BM_MultiThreadedTask)->Iterations(100)->Threads(4);  
+BENCHMARK(BM_MultiThreadedTask)->Iterations(100)->Threads(4);
 
 BENCHMARK_MAIN();
